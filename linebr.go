@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"flag"
 	"fmt"
 	"io"
 	"os"
@@ -60,14 +59,11 @@ func pagedStdin(pattern string, proc Proc, buflen int) {
 }
 
 func main() {
-	pattern := flag.String("p", "", "will insert a new line after provided text expression")
-	flag.Parse()
-	fn := PROC_TEXT
-
-	if *pattern == "" {
+	args := os.Args[1:]
+	if len(args) < 1 {
 		panic("Must provide pattern, provided empty string instead")
 	}
-
-	pagedStdin(*pattern, fn, BUFLEN)
+	pattern := strings.Join(args, " ")
+	pagedStdin(pattern, PROC_TEXT, BUFLEN)
 
 }
