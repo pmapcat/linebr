@@ -1,4 +1,4 @@
-## `linebr` fast and simple tool to add linebreaks to a file
+## `linebr` simple tool to add linebreaks to a file
 
 ### Rationale
 
@@ -6,7 +6,7 @@
 * Tey make __Emacs__ and __Cider__ go bad for some reason I don't know
 * __grep__ and __ag__ do not work nicely with file without linebreaks 
 
-This is a dead simple and fast tool to insert line breaks after a text pattern. 
+This is a dead simple tool to insert line breaks after a text pattern. 
 Here are some examples how it may be used
 
 ### Install 
