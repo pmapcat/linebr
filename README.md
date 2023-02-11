@@ -26,7 +26,7 @@ echo '{:name "Автомобільні диски", :parent_id 4653880, :categor
 
 #### Performance 
 
-It will take __~200ms__ on my machine to go through 150mb oneline file
+It will take __~200ms__ on my machine to go through __150mb__ oneline file
 This pefromance can be improved
 
 * TODO Make it faster
