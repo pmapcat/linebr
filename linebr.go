@@ -41,11 +41,11 @@ func pagedStdin(pattern string, proc Proc) {
 
 		switch {
 		case proc == PROC_TEXT:
-			fmt.Printf(strings.Replace(string(buf), pattern, rrep, -1))
+			fmt.Print(strings.Replace(string(buf), pattern, rrep, -1))
 		case proc == PROC_DEFAULTLEN:
-			fmt.Printf(string(buf) + NEWLINE)
+			fmt.Print(string(buf) + NEWLINE)
 		case proc == PROC_NOOP:
-			fmt.Printf(string(buf))
+			fmt.Print(string(buf))
 		case proc == PROC_REGEX:
 			panic("TODO: implement")
 		case proc == PROC_FUNC:
