@@ -1,5 +1,15 @@
 ## `linebr` will insert a new line after provided text
 
+### Rationale
+
+There are a lot of files that don't have line breaks, 
+they make Emacs/Repl go bad for some reason I don't know. 
+
+This is a dead simple and fast tool to insert line breaks
+after a certain text pattern. 
+
+Here are some examples how it may be used
+
 ### Install 
 
 `go install github.com/pmapcat/linebr@latest`
