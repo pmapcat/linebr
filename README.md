@@ -5,6 +5,9 @@
 There are a lot of files that don't have line breaks, 
 they make Emacs/Repl go bad for some reason I don't know. 
 
+Grep and Ag do not work nicely with file without linebreaks. 
+
+
 This is a dead simple and fast tool to insert line breaks
 after a certain text pattern. 
 
