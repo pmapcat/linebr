@@ -24,7 +24,6 @@ echo `echo '{:name "Автомобільні диски", :parent_id 4653880, :c
 
 ```
 time cat data/test_huge.txt | ./linebr -p "|"  | tail
-
 4a53b4e7-e85a-4d60-b50c-768a1243dd55|
 753b6ca9-4c69-4907-869e-48c1ed900a56|
 bed998f0-0adf-4655-97b5-c81db40b846b|
@@ -35,11 +34,9 @@ d660d940-0099-4cc4-915a-bb6a5084dfa0|
 6c6eab8f-6413-4857-ba95-1461621f5813|
 d694b546-40d3-4d56-8b5a-90d2810bfa3c|
 7e266fc9-88dc-445f-a76d-d4666abab2c9|
-
-cat data/test_huge.txt  0,00s user 0,37s system 27% cpu 1,349 total
-./linebr -p "|"  1,11s user 0,30s system 105% cpu 1,349 total
-tail  0,23s user 0,22s system 33% cpu 1,348 total
-
+cat data/test_huge.txt  0,00s user 0,18s system 22% cpu 0,785 total
+./linebr -p "|"  0,67s user 0,22s system 113% cpu 0,785 total
+tail  0,20s user 0,15s system 45% cpu 0,784 total
 ```
 
 
