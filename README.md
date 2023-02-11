@@ -1,9 +1,5 @@
 ## `linebr` will insert a new line after provided text
 
-Will insert a new line after provided text expression, </br>
-if no pattern provided will insert line breaks at 80 chars len </br>
-
-
 ### Install 
 
 `go install github.com/pmapcat/linebr@latest`
