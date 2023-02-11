@@ -28,8 +28,7 @@ echo '{:name "Автомобільні диски", :parent_id 4653880, :categor
 {:name "Посуд", :parent_id 2394287, :category_id 4626594}
 ```
 
-#### 150 mb one line length file will take this amount of time to finish
-
+#### It will take this amount of time to work through 150 mb file
 
 ```
 time cat data/test_huge.txt | ./linebr "|"   | tail
@@ -46,6 +45,8 @@ d694b546-40d3-4d56-8b5a-90d2810bfa3c|
 cat data/test_huge.txt  0,01s user 0,22s system 25% cpu 0,924 total
 ./linebr "|"  0,77s user 0,29s system 114% cpu 0,924 total
 tail  0,24s user 0,24s system 51% cpu 0,923 total
+```
+
 
 ### TODO
 
