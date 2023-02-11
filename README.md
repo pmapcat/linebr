@@ -24,7 +24,12 @@ echo '{:name "Автомобільні диски", :parent_id 4653880, :categor
 {:name "Посуд", :parent_id 2394287, :category_id 4626594}
 ```
 
-#### It will take this amount of time to work through 150 mb file
+#### Performance 
+
+It will take __~200ms__ on my machine to go through 150mb oneline file
+This pefromance can be improved
+
+* TODO Make it faster
 
 ```
 time cat data/test_huge.txt | ./linebr "|"   | tail
@@ -44,6 +49,3 @@ tail  0,24s user 0,24s system 51% cpu 0,923 total
 ```
 
 
-### TODO
-
-* Make this faster
