@@ -21,13 +21,10 @@ const (
 	PROC_FUNC
 )
 
-func addNewlines(pattern string, chunk string) string {
-	return strings.Replace(chunk, pattern, pattern+NEWLINE, -1)
-}
-
 func pagedStdin(pattern string, proc Proc) {
 	r := bufio.NewReader(os.Stdin)
 	buf := make([]byte, 0, 4*4096)
+	rrep := pattern + NEWLINE
 
 	for {
 		n, err := r.Read(buf[:cap(buf)])
@@ -44,7 +41,7 @@ func pagedStdin(pattern string, proc Proc) {
 
 		switch {
 		case proc == PROC_TEXT:
-			fmt.Printf(addNewlines(pattern, string(buf)))
+			fmt.Printf(strings.Replace(string(buf), pattern, rrep, -1))
 		case proc == PROC_DEFAULTLEN:
 			fmt.Printf(string(buf) + NEWLINE)
 		case proc == PROC_NOOP:
@@ -54,7 +51,6 @@ func pagedStdin(pattern string, proc Proc) {
 		case proc == PROC_FUNC:
 			panic("TODO: implement")
 		}
-
 		if err != nil && err != io.EOF {
 			panic(err)
 		}
