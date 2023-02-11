@@ -11,6 +11,8 @@ import (
 
 const NEWLINE = "\n"
 
+const BUFLEN = 4 * 4096
+
 type Proc int
 
 const (
@@ -21,9 +23,9 @@ const (
 	PROC_FUNC
 )
 
-func pagedStdin(pattern string, proc Proc) {
+func pagedStdin(pattern string, proc Proc, buflen int) {
 	r := bufio.NewReader(os.Stdin)
-	buf := make([]byte, 0, 4*4096)
+	buf := make([]byte, 0, buflen)
 	rrep := pattern + NEWLINE
 
 	for {
@@ -66,6 +68,6 @@ func main() {
 		panic("Must provide pattern, provided empty string instead")
 	}
 
-	pagedStdin(*pattern, fn)
+	pagedStdin(*pattern, fn, BUFLEN)
 
 }
