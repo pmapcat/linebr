@@ -48,6 +48,7 @@ tail  0,23s user 0,22s system 33% cpu 1,348 total
 ### TODO
 
 * Make this faster
+* Make detailed install instruction
 
 
 
