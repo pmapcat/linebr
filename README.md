@@ -1,4 +1,4 @@
-## `linebr` will insert a new line after provided text
+## `linebr` fast and simple tool to add linebreaks to a file
 
 ### Rationale
 
