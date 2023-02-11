@@ -26,13 +26,13 @@ echo '{:name "Автомобільні диски", :parent_id 4653880, :categor
 
 #### Performance 
 
-It will take __~300ms__ on my machine to go through __150mb__ oneline file.
+It will take __~800ms__ on my machine to go through __150mb__ oneline file.
 This pefromance can be improved
 
 * TODO Make it faster
 
 ```
-time cat data/test_huge.txt | linebr "|"   | tail
+time cat data/test_huge.txt | linebr "|" | tail 
 4a53b4e7-e85a-4d60-b50c-768a1243dd55|
 753b6ca9-4c69-4907-869e-48c1ed900a56|
 bed998f0-0adf-4655-97b5-c81db40b846b|
@@ -43,9 +43,9 @@ d660d940-0099-4cc4-915a-bb6a5084dfa0|
 6c6eab8f-6413-4857-ba95-1461621f5813|
 d694b546-40d3-4d56-8b5a-90d2810bfa3c|
 7e266fc9-88dc-445f-a76d-d4666abab2c9|
-cat data/test_huge.txt  0,01s user 0,22s system 25% cpu 0,924 total
-./linebr "|"  0,77s user 0,29s system 114% cpu 0,924 total
-tail  0,24s user 0,24s system 51% cpu 0,923 total
+cat data/test_huge.txt  0,01s user 0,20s system 24% cpu 0,836 total
+linebr "|"  0,71s user 0,25s system 114% cpu 0,836 total
+tail  0,25s user 0,19s system 52% cpu 0,835 total
 ```
 
 
