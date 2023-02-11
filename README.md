@@ -17,7 +17,7 @@ Here are some examples how it may be used
 ### Example 
 
 ```
-echo '{:name "Автомобільні диски", :parent_id 4653880, :category_id 4624949} {:name "Плитка", :parent_id 4639424, :category_id 4625710} {:name "Посуд", :parent_id 2394287, :category_id 4626594}' | ./linebr "} " 
+echo '{:name "Автомобільні диски", :parent_id 4653880, :category_id 4624949} {:name "Плитка", :parent_id 4639424, :category_id 4625710} {:name "Посуд", :parent_id 2394287, :category_id 4626594}' | linebr "} " 
 
 {:name "Автомобільні диски", :parent_id 4653880, :category_id 4624949} 
 {:name "Плитка", :parent_id 4639424, :category_id 4625710} 
@@ -26,13 +26,13 @@ echo '{:name "Автомобільні диски", :parent_id 4653880, :categor
 
 #### Performance 
 
-It will take __~200ms__ on my machine to go through __150mb__ oneline file.
+It will take __~300ms__ on my machine to go through __150mb__ oneline file.
 This pefromance can be improved
 
 * TODO Make it faster
 
 ```
-time cat data/test_huge.txt | ./linebr "|"   | tail
+time cat data/test_huge.txt | linebr "|"   | tail
 4a53b4e7-e85a-4d60-b50c-768a1243dd55|
 753b6ca9-4c69-4907-869e-48c1ed900a56|
 bed998f0-0adf-4655-97b5-c81db40b846b|
