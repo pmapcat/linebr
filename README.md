@@ -3,6 +3,12 @@
 Will insert a new line after provided text expression, </br>
 if no pattern provided will insert line breaks at 80 chars len </br>
 
+
+### Install 
+
+`go install github.com/pmapcat/linebr@latest`
+
+
 ### Example 
 
 ```
@@ -40,15 +46,7 @@ tail  0,23s user 0,22s system 33% cpu 1,348 total
 
 ```
 
-### Install 
-
-`go get github.com/pmapcat/linebr`
-
 
 ### TODO
 
 * Make this faster
-* Make detailed install instruction
-
-
-
